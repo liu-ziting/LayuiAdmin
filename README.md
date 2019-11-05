@@ -22,32 +22,33 @@
 ## 项目运行
 
     # 克隆到本地
+	
     git clone https://github.com/liu-ziting/LayuiAdmin.git
     
 
 ## 项目目录结构
 ```
 LayuiAdmin
-│  index.html		项目主体
+│  index.html			项目主体
 │  
 ├─css				css存放目录
 │      main.css
 │      news.css
 │      
-├─images		静态图片目录
+├─images			静态图片目录
 
 ├─js				公共js目录
-│      bodyTab.js			头部tab切换js配置
-│      index.js				项目主体js文件
+│      bodyTab.js		头部tab切换js配置
+│      index.js			项目主体js文件
 │      jquery-1.8.2.min.js
-│      leftNav.js			解析右侧导航栏
+│      leftNav.js		解析右侧导航栏
 │      main.js			
 │      newList.js		公共方法
 │      
 ├─json			
 │      navs.json		左侧导航栏json文件
 │      
-├─layui		layui框架文件
+├─layui				layui框架文件
 │              
 └─page
     ├─main.html			主页
@@ -59,18 +60,18 @@ LayuiAdmin
     │  	   login.html		登录页面
     │                  
     ├─message
-    │      messageList.html		留言列表
+    │      messageList.html	留言列表
     │      
     ├─news
-    │      newsAdd.html			文章添加
-    │      newsEdit.html		文章修改
-    │      newsList.html		文章列表
+    │      newsAdd.html		文章添加
+    │      newsEdit.html	文章修改
+    │      newsList.html	文章列表
     │      
     └─user
-            changePwd.html		修改密码
+            changePwd.html	修改密码
             setup.html		系统设置
-            userInfo.html		个人资料
-            userList.html		用户列表
+            userInfo.html	个人资料
+            userList.html	用户列表
 
 ```		
 
