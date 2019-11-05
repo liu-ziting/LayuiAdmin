@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页--APP后台管理模板</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+		<link rel="stylesheet" href="../css/main.css" media="all" />
+	</head>
+
+	<body class="childrenBody" onload="systemTime()">
+		<div class="main_bg">
+			<!--<img src="../images/blank.png" />-->
+			<div class="box">
+				<div id="time"></div>
+				<p>欢迎来到APP后台管理系统</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+		<script>
+			//获取系统时间，将时间以指定格式显示到页面。  
+			function systemTime() {
+				//获取系统时间。  
+				var dateTime = new Date();
+				var hh = dateTime.getHours();
+				var mm = dateTime.getMinutes();
+				var ss = dateTime.getSeconds();
+				//分秒时间是一位数字，在数字前补0。  
+				mm = extra(mm);
+				ss = extra(ss);
+				//将时间显示到ID为time的位置，时间格式形如：19:18:02  
+				document.getElementById("time").innerHTML = hh + ":" + mm + ":" + ss;
+				//每隔1000ms执行方法systemTime()。  
+				setTimeout("systemTime()", 1000);
+			}
+			//补位函数。  
+			function extra(x) {
+				//如果传入数字小于10，数字前补一位0。  
+				if(x < 10) {
+					return "0" + x;
+				} else {
+					return x;
+				}
+			}
+		</script>
+	</body>
+
+</html>

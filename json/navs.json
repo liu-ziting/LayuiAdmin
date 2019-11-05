@@ -1,0 +1,31 @@
+[{
+	"title" : "首页",
+	"icon" : "icon-computer",
+	"href" : "page/main.html",
+	"spread" : false
+},{
+	"title" : "文章列表",
+	"icon" : "icon-text",
+	"href" : "page/news/newsList.html",
+	"spread" : false
+},{
+	"title" : "类别管理",
+	"icon" : "&#xe857;",
+	"href" : "page/category/categoryList.html",
+	"spread" : false
+},{
+	"title" : "留言管理",
+	"icon" : "&#xe63a;",
+	"href" : "page/message/messageList.html",
+	"spread" : false
+},{
+	"title" : "用户管理",
+	"icon" : "&#xe612;",
+	"href" : "page/user/userList.html",
+	"spread" : false
+},{
+	"title" : "系统设置",
+	"icon" : "&#xe631;",
+	"href" : "page/user/setup.html",
+	"spread" : false
+}]

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>类别列表</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+		<link rel="stylesheet" href="../../css/news.css" media="all" />
+		<style>
+			.category_list{
+				width: 900px;
+			}
+		</style>
+	</head>
+
+	<body class="childrenBody">
+		<blockquote class="layui-elem-quote news_search">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					<input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
+				</div>
+				<div class="layui-input-inline" style="height: 38px;">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<select name="modules" lay-verify="required" lay-search="">
+								<option value="">选择类别</option>
+								<option value="1">证常青年</option>
+								<option value="2">非虚构</option>
+								<option value="3">我有故事</option>
+								<option value="4">科技</option>
+								<option value="5">摄影</option>
+							</select>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<a class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i>查询</a>
+			</div>
+		</blockquote>
+
+		<div class="left_list">
+			<div class="layui-inline">
+				<a class="layui-btn layui-btn-normal cateAdd_btn">添加类别</a>
+			</div>
+		</div>
+		<div class="layui-form category_list">
+			<table class="layui-table">
+				<colgroup>
+					<col width="50">
+					<col>
+					<col width="12%">
+					<col width="12%">
+					<col width="20%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
+						<th style="text-align:left;">类别名称</th>
+						<th>文章数量</th>
+						<th>是否启用</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" name="" lay-skin="primary"></td>
+						<td align="left" ondblclick="detailslist()">证常青年</td>
+						<td>150</td>
+						<td><input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="是|否"></td>
+						<td>
+							<a class="layui-btn layui-btn-mini layui-btn-normal cate_edit"><i class="layui-icon">&#xe642;</i>修改</a>
+							<a class="layui-btn layui-btn-danger layui-btn-mini cate_del"><i class="layui-icon">&#xe640;</i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="" lay-skin="primary"></td>
+						<td align="left" ondblclick="detailslist()">证常青年</td>
+						<td>150</td>
+						<td><input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="是|否"></td>
+						<td>
+							<a class="layui-btn layui-btn-mini layui-btn-normal cate_edit"><i class="layui-icon">&#xe642;</i>修改</a>
+							<a class="layui-btn layui-btn-danger layui-btn-mini cate_del"><i class="layui-icon">&#xe640;</i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="" lay-skin="primary"></td>
+						<td align="left" ondblclick="detailslist()">证常青年</td>
+						<td>150</td>
+						<td><input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="是|否"></td>
+						<td>
+							<a class="layui-btn layui-btn-mini layui-btn-normal cate_edit"><i class="layui-icon">&#xe642;</i>修改</a>
+							<a class="layui-btn layui-btn-danger layui-btn-mini cate_del"><i class="layui-icon">&#xe640;</i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="" lay-skin="primary"></td>
+						<td align="left" ondblclick="detailslist()">证常青年</td>
+						<td>150</td>
+						<td><input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="是|否"></td>
+						<td>
+							<a class="layui-btn layui-btn-mini layui-btn-normal cate_edit"><i class="layui-icon">&#xe642;</i>修改</a>
+							<a class="layui-btn layui-btn-danger layui-btn-mini cate_del"><i class="layui-icon">&#xe640;</i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="" lay-skin="primary"></td>
+						<td align="left" ondblclick="detailslist()">证常青年</td>
+						<td>150</td>
+						<td><input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="是|否"></td>
+						<td>
+							<a class="layui-btn layui-btn-mini layui-btn-normal cate_edit"><i class="layui-icon">&#xe642;</i>修改</a>
+							<a class="layui-btn layui-btn-danger layui-btn-mini cate_del"><i class="layui-icon">&#xe640;</i>删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="demo1"></div>
+		</div>
+		<!--以下是添加类别-->
+		<div id="cateAdd" class="hide"> 
+			<form class="layui-form" action="" style="padding: 20px;">
+			<div class="layui-form-item">
+				<label class="layui-form-label">类别名称</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="title"  placeholder="请输入类别名称" class="layui-input">
+				</div>
+			</div>
+			</form>
+		</div>
+		<!--以下是修改类别-->
+		<div id="editAdd" class="hide"> 
+			<form class="layui-form" action="" style="padding: 20px;">
+			<div class="layui-form-item">
+				<label class="layui-form-label">类别名称</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="title"  placeholder="请输入类别名称" class="layui-input">
+				</div>
+			</div>
+			</form>
+		</div>
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="../../js/newList.js"></script>
+		<script>
+			//添加类别
+			$(".cateAdd_btn").click(function(){
+			layui.use('layer', function() {
+					var indexlay ;
+					var layedit;
+					var $ = layui.jquery,
+					layer = layui.layer; 
+					layer.open({
+						type: 1,
+						title: '添加类别',
+						area: ['500px', '200px'],
+						content: $("#cateAdd"), 
+						btn: ['提交', '关闭'],
+						btnAlign: 'c',
+						success: function(layero, index) {
+						},
+						yes: function(index, layero) {
+							
+						},
+						btn2: function(index, layero) {
+							//按钮【按钮二】的回调
+							//return false 开启该代码可禁止点击该按钮关闭
+						},
+						cancel: function() {
+							//右上角关闭回调
+							//return false 开启该代码可禁止点击该按钮关闭
+						}
+					});
+				});
+			})
+			//修改类别
+			$(".cate_edit").click(function(){
+			layui.use('layer', function() {
+					var indexlay ;
+					var layedit;
+					var $ = layui.jquery,
+					layer = layui.layer; 
+					layer.open({
+						type: 1,
+						title: '修改类别',
+						area: ['500px', '200px'],
+						content: $("#editAdd"), 
+						btn: ['修改', '关闭'],
+						btnAlign: 'c',
+						success: function(layero, index) {
+						},
+						yes: function(index, layero) {
+							
+						},
+						btn2: function(index, layero) {
+							//按钮【按钮二】的回调
+							//return false 开启该代码可禁止点击该按钮关闭
+						},
+						cancel: function() {
+							//右上角关闭回调
+							//return false 开启该代码可禁止点击该按钮关闭
+						}
+					});
+				});
+			})
+			//删除类别
+			$(".cate_del").click(function() {
+				//点击删除按钮
+				layer.confirm('这个类别不要了？', {
+					btn: ['是', '否'] //按钮
+				}, function() {
+					layer.msg('删除成功');
+				}, function() {});
+			})
+		</script>
+	</body>
+
+</html>
